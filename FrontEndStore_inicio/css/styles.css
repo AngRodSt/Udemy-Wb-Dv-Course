@@ -1,0 +1,85 @@
+:root{
+    --primario: #129987;
+    --primarioOscuro: #1c7f72;
+    --secundario: #FFCE00;
+    --secundarioOscuro: #4c3c20;
+    --blanco:#FFF;
+    --negro:#000;
+    --fuente: 'Staatliches', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /*Para que el padding y margin no afecten el tamaño de los elementos*/
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/*Globales*/
+
+body{
+    background-color: var(--primarioOscuro);
+    font-family: var(--fuente);
+}
+
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+h1{
+    font-size: 3.8rem;
+    color: var(--secundario);
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+
+
+/*Header*/
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    margin: 3rem 0;
+}
+
+/*Navegacion*/
+.navegacion{
+    background-color: var(--primario);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.navegacion__enlace{
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+.navegacion__enlace:hover,
+.navegacion__enlace--activo{
+    color: var(--secundario);
+}
+
+/*Contenedor*/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+   
+}
