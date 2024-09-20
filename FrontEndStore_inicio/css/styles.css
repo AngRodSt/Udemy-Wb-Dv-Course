@@ -151,3 +151,20 @@ padding: 1rem;
         grid-column: 2 / 4;
     }
 }
+
+
+/*Nosotros*/
+
+.nosotros{
+    display: grid;
+  
+}
+.nosotros_imagen{
+    width: 100%;
+    
+}
+@media (min-width: 769px) {
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
