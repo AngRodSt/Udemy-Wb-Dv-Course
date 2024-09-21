@@ -1,73 +1,97 @@
-:root{
+:root {
     --primario: #129987;
     --primarioOscuro: #1c7f72;
     --secundario: #FFCE00;
-    --secundarioOscuro: #4c3c20;
-    --blanco:#FFF;
-    --negro:#000;
+    --secundarioOscuro: #b98730;
+    --blanco: #FFF;
+    --negro: #000;
     --fuente: 'Staatliches', sans-serif;
 }
-html{
+
+html {
     font-size: 62.5%;
-    box-sizing: border-box; /*Para que el padding y margin no afecten el tamaño de los elementos*/
+    box-sizing: border-box;
+    /*Para que el padding y margin no afecten el tamaño de los elementos*/
 }
-*, *:before, *:after{
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 /*Globales*/
 
-body{
+body {
     background-color: var(--primarioOscuro);
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
     font-family: var(--fuente);
 }
 
-img{
-    max-width: 100%;
-}
-a{
-    text-decoration: none;
-}
-h1,h2,h3{
+h1,
+h2,
+h3 {
     text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuente);
 }
 
-h1{
+h1 {
     font-size: 3.8rem;
-    color: var(--secundario);
+
 }
-h2{
+
+h2 {
     font-size: 2.8rem;
 }
-h3{
+
+h3 {
     font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: var(--blanco);
+    line-height: 1.5;
 }
 
 
 /*Header*/
-header{
+header {
     display: flex;
     justify-content: center;
 }
 
-.header__logo{
+.header__logo {
     margin: 3rem 0;
 }
+
 /*Footer*/
-.footer{
+.footer {
     display: flex;
     margin-top: 2rem;
     background-color: var(--primario);
     justify-content: center;
 }
-.footer__texto{
+
+.footer__texto {
     font-size: 2rem;
     color: var(--blanco);
     padding: 1rem;
 }
 
 /*Navegacion*/
-.navegacion{
+.navegacion {
     background-color: var(--primario);
     display: flex;
     justify-content: center;
@@ -75,78 +99,85 @@ header{
     padding: 1rem 0;
 }
 
-.navegacion__enlace{
+.navegacion__enlace {
     color: var(--blanco);
     font-size: 3rem;
 }
 
 .navegacion__enlace:hover,
-.navegacion__enlace--activo{
+.navegacion__enlace--activo {
     color: var(--secundario);
 }
 
 /*Contenedor*/
-.contenedor{
+.contenedor {
     max-width: 120rem;
     margin: 0 auto;
 }
+
 /*Grid*/
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
+
 @media (min-width: 768px) {
- .grid{
-     grid-template-columns: repeat(3, 1fr);
- }
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
+
 /*Producto*/
-.producto{
-background-color: var(--primario);
-padding: 1rem;
+.producto {
+    background-color: var(--primario);
+    padding: 1rem;
 }
 
-.producto__imagen{
-   width: 100%;
+.producto__imagen {
+    width: 100%;
 }
 
 
-.producto__nombre{
+.producto__nombre {
     font-size: 3.8rem;
     color: var(--blanco);
 }
-.producto__precio{
+
+.producto__precio {
     font-size: 2.8rem;
     color: var(--secundario);
 }
+
 .producto__nombre,
-.producto__precio{
+.producto__precio {
     margin: 1rem 0;
     text-align: center;
     line-height: 1.2;
 }
+
 /*Grafico*/
-.grafico{
+.grafico {
     min-height: 30rem;
     background-repeat: no-repeat;
     background-size: cover;
     grid-column: 1 / 3;
 }
 
-.grafico--camisas{
+.grafico--camisas {
     grid-row: 2 / 3;
     background-image: url('../img/grafico1.jpg');
-   
+
 }
 
-.grafico--node{
+.grafico--node {
     grid-row: 8 / 9;
     background-image: url('../img/grafico2.jpg');
     background-repeat: no-repeat;
 }
-@media (min-width: 769px) {
-    .grafico--node{
+
+@media (min-width: 768px) {
+    .grafico--node {
         grid-row: 5 / 6;
         grid-column: 2 / 4;
     }
@@ -155,16 +186,94 @@ padding: 1rem;
 
 /*Nosotros*/
 
-.nosotros{
+.nosotros {
     display: grid;
-  
+    gap: 2rem;
+
 }
-.nosotros_imagen{
+
+.nosotros__imagen {
+    grid-row: 1/2;
     width: 100%;
+
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .nosotros__imagen {
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+}
+
+
+/*bloques*/
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque__imagen {
+    width: 100%;
+}
+
+.bloque__titulo {
+    margin: 0;
+}
+
+/*producto - camisa*/
+.camisa{
+    gap: 2rem;
+    display: grid;
+}
+.camisa__imagen{
+    width: 100%;
+}
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    font-size: 2rem;
+}
+.formulario__campo{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    border: 1rem solid var(--primario);
+    background-color: transparent;
+    color: rgb(192, 192, 192);
+    appearance: none;   
+}
+.formulario__boton{
+    grid-column: 1 / 3;
+    font-family: var(--fuente);
+    background-color: var(--secundario);
+    border: none;
+    width: 100%;
+    padding: 2rem;
+    transition: background-color .3s;
     
 }
-@media (min-width: 769px) {
-    .nosotros{
+.formulario__boton:hover{
+    cursor: pointer ;
+    background-color: var(--secundarioOscuro);
+}
+
+@media (min-width: 768px) {
+    .camisa{
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    
 }
