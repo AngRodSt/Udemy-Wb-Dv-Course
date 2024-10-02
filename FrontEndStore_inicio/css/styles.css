@@ -132,6 +132,7 @@ header {
 .producto {
     background-color: var(--primario);
     padding: 1rem;
+    
 }
 
 .producto__imagen {
@@ -140,6 +141,7 @@ header {
 
 
 .producto__nombre {
+    font-family: var(--fuente);
     font-size: 3.8rem;
     color: var(--blanco);
 }
@@ -147,6 +149,7 @@ header {
 .producto__precio {
     font-size: 2.8rem;
     color: var(--secundario);
+    font-family: var(--fuente);
 }
 
 .producto__nombre,

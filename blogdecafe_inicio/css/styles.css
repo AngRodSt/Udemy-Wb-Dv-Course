@@ -1,0 +1,292 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+/*Globales*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+
+/*Utilidades*/
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+/*Header*/
+
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+.no-webp .header{
+    background-image: url(../img/banner.jpg);
+}
+
+.header{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: none;
+    height: 60rem;
+}
+
+.contenedor{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+   
+
+}
+.barra{
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .barra{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.logo{
+
+    color: var(--blanco);
+    font-weight: 400;
+    font-size: 4.8rem;
+    font-family: var(--fuenteHeading);
+    line-height: 1.5;
+}
+.logo--bold{
+    font-weight: 700;
+}
+
+/*navegacion*/
+
+.navegacion__enlace{
+    color: var(--blanco);
+    display: block;
+    font-family: var(--fuenteParrafos);
+    font-size: 1.8rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+      
+    }
+}
+
+/*principal*/
+.principal{
+    color: var(--blanco);
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    line-height: 1.5;
+
+}
+@media (min-width: 768px) {
+ .principal{
+    margin-top: 15rem;
+ }
+}
+
+
+/*Blog*/
+
+@media (min-width: 768px) {
+    .contenido__principal{
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+}
+.entrada{
+    border-bottom:  1px solid var(--gris) ;
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type{
+    border-bottom: none;
+}
+
+.boton{
+    display: block;
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    border: none;
+
+}
+@media (min-width: 768px) {
+ .boton{
+    display: inline-block;
+ }
+}
+
+.boton--primario{
+    background-color: var(--negro);
+
+}
+
+
+/*Sidebar*/
+
+.side-bar{
+
+}
+
+.cursos{
+    list-style: none;
+}
+
+.widget-curso{
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type{
+    border: none;
+}
+
+.widget-curso__label{
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: var(--fuenteHeading);
+}
+
+.widget-curso__info{
+    font-weight: 300;
+}
+
+.boton--secundario{
+    background-color: var(--primario);
+}
+
+/*footer*/
+.footer{
+    background-color: var(--negro);
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+
+
+/*nosotros*/
+.nosotros{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/*cursos*/
+
+.curso{
+    padding: 4rem 0;
+        border-bottom: 1px solid var(--gris);
+}
+
+.curso:last-of-type{
+    border-bottom: none;
+}
+
+@media (min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        
+    }
+    
+}
+
+/*contacto*/
+
+.contacto-bg{
+    background-image: url("../img/contacto.jpg");
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.formulario{
+    background-color: var(--blanco);
+    padding: 5rem;
+    margin: -5rem auto 0 auto;
+    width: 95%;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+    
+}
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea{
+    height: 20rem;
+}
+
+.boton__submit{
+    background-color: var(--negro);
+}
